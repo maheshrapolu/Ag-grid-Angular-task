@@ -1,0 +1,54 @@
+<br>
+<div class="container">
+<form [formGroup]="form" class="form-group">
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="name" formControlName="name">
+    </div>
+    <div class="col">
+      <input type="number" class="form-control" placeholder="salary" formControlName="salary">
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="city" formControlName="city">
+    </div>
+    <div class="col">
+      <input type="number" class="form-control" placeholder="phonenumber"formControlName="phonenumber" >
+    </div>
+  </div><br>
+  <div  class="row">
+    <button class="btn btn-primary px-3" (click)=Post_Data()>Add</button>&nbsp;
+    <button class="btn btn-primary  px-3" (click)=update()>Update</button>
+</div>
+</form>
+</div>
+<br><br><br><br>
+<table class="table" border="3">
+    <tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>salary</th>
+        <th>city</th>
+        <th>phonenumber</th>
+        <th>Action</th>
+        
+    </tr>
+    <tr *ngFor="let a of data?.employeeList | paginate: { itemsPerPage: 7, currentPage: p }">
+        <td>{{a.id}}</td>
+        <td>{{a.name}}</td>
+        <td>{{a.salary}}</td>
+        <td>{{a.city}}</td>
+        <td>{{a.phonenumber}}</td>
+        
+        <td>
+                <button type="submit"  class="btn btn-primary" (click)=edit(a)>Edit</button>&nbsp;
+                <button type="submit"  class="btn btn-primary" (click)=delete(a)>Delete</button>
+        </td>      
+               
+        
+    </tr>
+   
+</table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

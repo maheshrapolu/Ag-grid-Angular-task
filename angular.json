@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ag-grid": {
+    "Curdpoc": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ag-grid",
+            "outputPath": "dist/Curdpoc",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ag-grid:build"
+            "browserTarget": "Curdpoc:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ag-grid:build:production"
+              "browserTarget": "Curdpoc:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ag-grid:build"
+            "browserTarget": "Curdpoc:build"
           }
         },
         "test": {
@@ -110,19 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ag-grid:serve"
+            "devServerTarget": "Curdpoc:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ag-grid:serve:production"
+              "devServerTarget": "Curdpoc:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ag-grid",
+  "defaultProject": "Curdpoc",
   "cli": {
-    "analytics": "42e09ee6-ef50-4d6d-b3d0-3f0aca2c38fb"
+    "analytics": "83f26800-9860-445e-a323-e67dbd772dbb"
   }
 }
