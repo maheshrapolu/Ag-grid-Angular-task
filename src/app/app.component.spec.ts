@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Curdpoc'`, () => {
+  it(`should have as title 'ag-grid'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Curdpoc');
+    expect(app.title).toEqual('ag-grid');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Curdpoc app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('ag-grid app is running!');
   });
 });

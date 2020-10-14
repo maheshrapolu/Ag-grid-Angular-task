@@ -1,25 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule, FormsModule }    from '@angular/forms';
+import { AgGridModule } from 'ag-grid-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import {NgxPaginationModule} from 'ngx-pagination'; 
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AgGridModule.withComponents([]),
     HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule,
-    NgxPaginationModule
+    FormsModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

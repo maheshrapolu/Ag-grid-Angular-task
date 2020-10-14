@@ -1,0 +1,18 @@
+
+<div style="text-align: center;">
+ 
+  <input type="text"  placeholder="Filter..." (keyup)="quicksearch()" [(ngModel)]="searchvalue"/>&nbsp;
+    <button (click)="onBtnExport()">Download Csv File)</button>
+    <div>
+      <br>
+    </div>
+<ag-grid-angular
+    style="width: 650px; height: 1600px; text-align: left;padding-left:456px;"
+    class="ag-theme-alpine"
+    [rowData]="gridApi "
+    (gridReady)="onGridReady($event)"
+    [columnDefs]="columnDefs"
+    rowSelection="multiple"
+>
+</ag-grid-angular>
+</div>
